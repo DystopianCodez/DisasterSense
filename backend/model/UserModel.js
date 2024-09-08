@@ -3,21 +3,31 @@ const randomstring = require("randomstring");
 var uuid = require("uuid-random");
 
 class UserModel {
-  async register(firstName, lastName, emailAddress, password) {
+  async register(
+    firstName,
+    lastName,
+    emailAddress,
+    password,
+    latitude,
+    longitude,
+  ) {
     let object = {
       firstName: firstName,
       lastName: lastName,
       emailAddress: emailAddress,
       password: password,
       location: {
-        latitude: undefined,
-        longitude: undefined,
+        latitude: latitude,
+        longitude: longitude,
       },
       accountIdentity: {
         uuid: uuid().toUpperCase(),
         linkCode: randomstring.generate(5),
       },
       relativeGroup: [],
+      healthInformation: {
+        HEART_RATE: 175,
+      },
     };
 
     try {

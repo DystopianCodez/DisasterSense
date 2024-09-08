@@ -8,10 +8,10 @@ function LoginScreen() {
   const [emailAddress, setEmailAddress] = useState("");
   const [password, setPassword] = useState("");
   const [fontsLoaded] = useFonts({
-    "Teacher-Regular": require("../../../assets/fonts/Teachers-Regular.ttf"),
-    "Teacher-Medium": require("../../../assets/fonts/Teachers-Medium.ttf"),
-    "Teacher-SemiBold": require("../../../assets/fonts/Teachers-SemiBold.ttf"),
-    "Teacher-ExtraBold": require("../../../assets/fonts/Teachers-ExtraBold.ttf"),
+    "Teacher-Regular": require("../../../assets/fonts/DMSans-Regular.ttf"),
+    "Teacher-Medium": require("../../../assets/fonts/DMSans-Medium.ttf"),
+    "Teacher-SemiBold": require("../../../assets/fonts/DMSans-SemiBold.ttf"),
+    "Teacher-Bold": require("../../../assets/fonts/DMSans-Bold.ttf"),
   });
 
   if (!fontsLoaded) {
